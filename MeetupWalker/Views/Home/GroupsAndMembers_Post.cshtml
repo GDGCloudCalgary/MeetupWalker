@@ -1,0 +1,52 @@
+@model List<string[]>
+
+@{
+    ViewData["Title"] = "GroupsAndMembers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Groups and Members...</h2>
+
+
+
+<div style="font-size:smaller">
+    <table style="font-family:Tahoma" border="1">
+        <tr>
+            <th>Group Name</th>
+            <th>Group Id</th>
+            <th>Group Member(s)</th>
+            <th>Group Created</th>
+            <th>Group Url Name</th>
+            <th>Group Organizer Name</th>
+            <th>Group Description</th>
+            <th>Group Total Events</th>
+            <th>Group Rate Limit</th>
+            <th>Member Name</th>
+            <th>Member Id</th>
+            <th>Member Joined(yyyy-mm-dd)</th>
+            <th>Member Status</th>
+
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td style="font-size:smaller">@item[0]</td>
+                <td style="font-size:smaller">@item[1]</td>
+                <td style="font-size:smaller">@item[2]</td>
+                <td style="font-size:smaller">@item[3]</td>
+                <td style="font-size:smaller">@item[4]</td>
+                <td style="font-size:smaller">@item[5]</td>
+                <td style="font-size:smaller">@item[6]</td>
+                <td style="font-size:smaller">@item[7]</td>
+                <td style="font-size:smaller">@item[8]</td>
+
+                <td style="font-size:smaller">@item[9]</td>
+                <td style="font-size:smaller">@item[10]</td>
+                <td style="font-size:smaller">@item[11]</td>
+                <td style="font-size:smaller">@item[12]</td>
+
+            </tr>
+        }
+    </table>
+</div>

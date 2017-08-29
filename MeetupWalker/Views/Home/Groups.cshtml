@@ -1,0 +1,43 @@
+﻿@model List<string[]>
+
+@{
+    ViewData["Title"] = "Groups";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>E·nu·mer·ated ɡro͞op/...</h2>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div style="font-size:smaller">
+    <table style="font-family:Tahoma" border="1">
+        <tr>
+            <th style="font-size:smaller">Group Name</th>
+            <th style="font-size:smaller">Group Id</th>
+            <th style="font-size:smaller">Group Member(s)</th>
+            <th style="font-size:smaller">Group Created</th>
+            <th style="font-size:smaller">Group Url Name</th>
+            <th style="font-size:smaller">Group Organizer Name</th>
+            <th style="font-size:smaller">Group Description</th>
+            <th style="font-size:smaller">Group Total Events</th>
+            <th style="font-size:smaller">Group Rate Limit</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td style="font-size:smaller">@item[0]</td>
+                <td style="font-size:smaller">@item[1]</td>
+                <td style="font-size:smaller">@item[2]</td>
+                <td style="font-size:smaller">@item[3]</td>
+                <td style="font-size:smaller">@item[4]</td>
+                <td style="font-size:smaller">@item[5]</td>
+                <td style="font-size:smaller">@item[6]</td>
+                <td style="font-size:smaller">@item[7]</td>
+                <td style="font-size:smaller">@item[8]</td>
+            </tr>
+        }
+
+    </table>
+</div>

@@ -1,0 +1,14 @@
+@model List<string[]>
+
+@{
+    ViewData["Title"] = "GroupsAndMembers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Groups and Members...</h2>
+@using (Html.BeginForm("GroupsAndMembers", "Home"))
+{
+    @Html.Label("Enter group(s) Ids to retrieve members: ");
+    @Html.TextBox("GroupIdsArg");
+    <input type="submit" class="GroupsAndMembers_Post" />
+}
+
